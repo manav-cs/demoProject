@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>qa-automation-tests</td>
+                          <td>1</td>
+                        <td>28 Sep 2022, 21:02</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_Hamburger_steps.theHamburgerMenuCloses()</td>
+                <td>2</td>
+                <td class="duration" data-value="15574392000">15s 574ms</td>
+                <td class="duration" data-value="7787196000">7s 787ms</td>
+                <td class="failed">50.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_Hamburger_steps.theLinkIsPresentInHamburgerMenu(java.lang.String)</td>
+                <td>6</td>
+                <td class="duration" data-value="15074735000">15s 074ms</td>
+                <td class="duration" data-value="2512455833">2s 512ms</td>
+                <td class="failed">16.67%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_My_Trades_steps.theCompleteTradeOfferButtonIsNotPresent()</td>
+                <td>1</td>
+                <td class="duration" data-value="9000">000ms</td>
+                <td class="duration" data-value="9000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_My_Trades_steps.theNewTradeInVehicleIsPresentOnTheMyTrades()</td>
+                <td>4</td>
+                <td class="duration" data-value="44000">000ms</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_My_Trades_steps.theOldTradeInVehicleIsStillPresentOnTheMyTradesPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="6000">000ms</td>
+                <td class="duration" data-value="6000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_My_Trades_steps.theTradeOfferDetailsPageIsPresent()</td>
+                <td>1</td>
+                <td class="duration" data-value="21000">000ms</td>
+                <td class="duration" data-value="21000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_Saved_Deals_steps.theCSEUserSelectsInTheMilesPerYearDropDown(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="47000">000ms</td>
+                <td class="duration" data-value="23500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_Saved_Deals_steps.theCSEUserSwitchesToTheFinanceTab()</td>
+                <td>1</td>
+                <td class="duration" data-value="53000">000ms</td>
+                <td class="duration" data-value="53000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_Saved_Deals_steps.theCSEUserSwitchesToTheLeaseTab()</td>
+                <td>5</td>
+                <td class="duration" data-value="218000">000ms</td>
+                <td class="duration" data-value="43600">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_Saved_Deals_steps.theCSEUserUpdatesTheDesiredDownPaymentWithTheSameValue()</td>
+                <td>1</td>
+                <td class="duration" data-value="52000">000ms</td>
+                <td class="duration" data-value="52000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_Saved_Deals_steps.theCheckBoxOrderDoesNotChange()</td>
+                <td>5</td>
+                <td class="duration" data-value="223000">000ms</td>
+                <td class="duration" data-value="44600">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_Saved_Deals_steps.theDealPageStillHasTheUpdatedInformation()</td>
+                <td>10</td>
+                <td class="duration" data-value="219000">000ms</td>
+                <td class="duration" data-value="21900">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_Saved_Deals_steps.theListOfDealOptionsDoNotRepeat()</td>
+                <td>7</td>
+                <td class="duration" data-value="292000">000ms</td>
+                <td class="duration" data-value="41714">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Garage_Saved_Deals_steps.theListOfDealOptionsIsOrderedByMonthDescending()</td>
+                <td>7</td>
+                <td class="duration" data-value="508000">000ms</td>
+                <td class="duration" data-value="72571">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Get_Approved_steps.aPositiveLoanDecisionIsMade()</td>
+                <td>2</td>
+                <td class="duration" data-value="68000">000ms</td>
+                <td class="duration" data-value="34000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Get_Approved_steps.theAccountSetupPageAppears()</td>
+                <td>2</td>
+                <td class="duration" data-value="78000">000ms</td>
+                <td class="duration" data-value="39000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Get_Approved_steps.theEmploymentInformationIsSubmitted()</td>
+                <td>2</td>
+                <td class="duration" data-value="126000">000ms</td>
+                <td class="duration" data-value="63000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Get_Approved_steps.theGetApprovedFinancePageIsPopulatedCorrectly()</td>
+                <td>1</td>
+                <td class="duration" data-value="30000">000ms</td>
+                <td class="duration" data-value="30000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Get_Approved_steps.theGetApprovedPageIsPopulatedCorrectly()</td>
+                <td>1</td>
+                <td class="duration" data-value="39000">000ms</td>
+                <td class="duration" data-value="39000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Get_Approved_steps.theGetApprovedPageIsPresent()</td>
+                <td>4</td>
+                <td class="duration" data-value="94000">000ms</td>
+                <td class="duration" data-value="23500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Get_Approved_steps.theLeasedVehicleIsPresentUnderSavedDeals()</td>
+                <td>2</td>
+                <td class="duration" data-value="68000">000ms</td>
+                <td class="duration" data-value="34000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.CSE_Registration_SignIn_steps.theCseUserCanEnterTheirCredentials()</td>
+                <td>1</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Hook.before(io.cucumber.java.Scenario)</td>
+                <td>74</td>
+                <td class="duration" data-value="689718557000">11m 29s 718ms</td>
+                <td class="duration" data-value="9320521040">9s 320ms</td>
+                <td class="failed">98.65%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Hook.tearDown(io.cucumber.java.Scenario)</td>
+                <td>74</td>
+                <td class="duration" data-value="54952632000">54s 952ms</td>
+                <td class="duration" data-value="742603135">742ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Portal_Customers_steps.thePortalAdminUserClicksOnTheButton(java.lang.String)</td>
+                <td>3</td>
+                <td class="duration" data-value="58000">000ms</td>
+                <td class="duration" data-value="19333">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Portal_Customers_steps.thePortalAdminUserClicksOnTheCustomersButton(java.lang.String)</td>
+                <td>3</td>
+                <td class="duration" data-value="59000">000ms</td>
+                <td class="duration" data-value="19666">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Portal_Customers_steps.thePortalAdminUserEnterTheNewlyCreatedEmailAddressIntoEmailSearchBox()</td>
+                <td>2</td>
+                <td class="duration" data-value="30000">000ms</td>
+                <td class="duration" data-value="15000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Portal_Customers_steps.thePortalAdminUserEntersTheNewlyCreatedCustomerFullNameIntoNameSearchBox()</td>
+                <td>2</td>
+                <td class="duration" data-value="42000">000ms</td>
+                <td class="duration" data-value="21000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Portal_Customers_steps.thePortalAdminUserShouldBeAbleToVerifyNewlyCreatedCustomersInfo()</td>
+                <td>3</td>
+                <td class="duration" data-value="63000">000ms</td>
+                <td class="duration" data-value="21000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Portal_Login_steps.thePortalAdminUserNavigatesToPortalHomepage()</td>
+                <td>3</td>
+                <td class="duration" data-value="225000">000ms</td>
+                <td class="duration" data-value="75000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserClicksOnTheUpdateButtonUnderMyAccount()</td>
+                <td>9</td>
+                <td class="duration" data-value="156000">000ms</td>
+                <td class="duration" data-value="17333">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserEnablesSendMeTextMessagesCheckbox()</td>
+                <td>1</td>
+                <td class="duration" data-value="37000">000ms</td>
+                <td class="duration" data-value="37000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserEntersValidAccountInformationToUpdate()</td>
+                <td>2</td>
+                <td class="duration" data-value="55000">000ms</td>
+                <td class="duration" data-value="27500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserFieldShouldSee(java.lang.String,java.lang.String)</td>
+                <td>7</td>
+                <td class="duration" data-value="99000">000ms</td>
+                <td class="duration" data-value="14142">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserShouldBeOnTheUpdateAccountPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="25000">000ms</td>
+                <td class="duration" data-value="25000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserShouldSeeTheAccountInfoTheyEnteredDuringRegistration()</td>
+                <td>1</td>
+                <td class="duration" data-value="25000">000ms</td>
+                <td class="duration" data-value="25000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserShouldSeeTheNewlyUpdatedAccountInfo()</td>
+                <td>1</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserShouldSeeTheSMSCheckBoxSelected()</td>
+                <td>1</td>
+                <td class="duration" data-value="36000">000ms</td>
+                <td class="duration" data-value="36000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserUpdatesAccountInfoWithoutAFirstName()</td>
+                <td>1</td>
+                <td class="duration" data-value="17000">000ms</td>
+                <td class="duration" data-value="17000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserUpdatesAccountInfoWithoutEmail()</td>
+                <td>1</td>
+                <td class="duration" data-value="16000">000ms</td>
+                <td class="duration" data-value="16000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserUpdatesAccountInfoWithoutLastName()</td>
+                <td>1</td>
+                <td class="duration" data-value="17000">000ms</td>
+                <td class="duration" data-value="17000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserUpdatesAccountInfoWithoutPhone()</td>
+                <td>1</td>
+                <td class="duration" data-value="23000">000ms</td>
+                <td class="duration" data-value="23000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Account_steps.theUpgradeUserUpdatesAccountInformationWith(java.lang.String)</td>
+                <td>3</td>
+                <td class="duration" data-value="51000">000ms</td>
+                <td class="duration" data-value="17000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Address_steps.theUpgradeUserClicksOnTheLinkFromTheLeftNav()</td>
+                <td>3</td>
+                <td class="duration" data-value="90000">000ms</td>
+                <td class="duration" data-value="30000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Address_steps.theUpgradeUserClicksOnTheUpdateButtonUnderMyAddress()</td>
+                <td>2</td>
+                <td class="duration" data-value="22000">000ms</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Address_steps.theUpgradeUserEntersAValidAddressToUpdate()</td>
+                <td>1</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Address_steps.theUpgradeUserEntersAnInvalidAddressToUpdate()</td>
+                <td>1</td>
+                <td class="duration" data-value="9000">000ms</td>
+                <td class="duration" data-value="9000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Address_steps.theUpgradeUserShouldBeOnTheUpdateAddressPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="16000">000ms</td>
+                <td class="duration" data-value="16000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Address_steps.theUpgradeUserShouldSeeTheAddressTheyEnteredDuringRegistration()</td>
+                <td>1</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Address_steps.theUpgradeUserShouldSeeTheErrorMessage(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="7000">000ms</td>
+                <td class="duration" data-value="7000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Address_steps.theUpgradeUserShouldSeeTheNewlyUpdatedAddress()</td>
+                <td>1</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Appointment_steps.theUserClicksOnLinkFromMyAppointments()</td>
+                <td>1</td>
+                <td class="duration" data-value="31000">000ms</td>
+                <td class="duration" data-value="31000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Appointment_steps.theUserClicksOnLinkFromTheLeftNev()</td>
+                <td>2</td>
+                <td class="duration" data-value="104839423000">1m 44s 839ms</td>
+                <td class="duration" data-value="52419711500">52s 419ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Appointment_steps.theUserClicksOnLinkFromTheLeftNevInUP()</td>
+                <td>1</td>
+                <td class="duration" data-value="37000">000ms</td>
+                <td class="duration" data-value="37000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Appointment_steps.theUserClicksOnLinkOnMyAppointments()</td>
+                <td>1</td>
+                <td class="duration" data-value="28000">000ms</td>
+                <td class="duration" data-value="28000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Appointment_steps.theUserClicksOnMyGarageFromHamburgerMenu()</td>
+                <td>22</td>
+                <td class="duration" data-value="46331380000">46s 331ms</td>
+                <td class="duration" data-value="2105971818">2s 105ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Appointment_steps.theUserCopyDealAndSavesTheDeal()</td>
+                <td>1</td>
+                <td class="duration" data-value="33000">000ms</td>
+                <td class="duration" data-value="33000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Appointment_steps.theUserSelectsVehicleAndSchedulesTestDrive()</td>
+                <td>1</td>
+                <td class="duration" data-value="333000">000ms</td>
+                <td class="duration" data-value="333000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Appointment_steps.theUserShouldBeNavigatedToGoogleMapPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="25000">000ms</td>
+                <td class="duration" data-value="25000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Appointment_steps.theUserShouldVerify()</td>
+                <td>1</td>
+                <td class="duration" data-value="43000">000ms</td>
+                <td class="duration" data-value="43000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Appointment_steps.theUserShouldVerifyMessageInUP()</td>
+                <td>1</td>
+                <td class="duration" data-value="50000">000ms</td>
+                <td class="duration" data-value="50000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Appointment_steps.theUserSignIntoUP()</td>
+                <td>8</td>
+                <td class="duration" data-value="56100108000">56s 100ms</td>
+                <td class="duration" data-value="7012513500">7s 012ms</td>
+                <td class="failed">87.50%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Contact_Dealer_steps.theUpgradeUserClicksOnShopNewCarsToNavigateToOfferDetailsPage()</td>
+                <td>15</td>
+                <td class="duration" data-value="1009000">001ms</td>
+                <td class="duration" data-value="67266">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Contact_Dealer_steps.theUpgradeUserReceivesTheCertificateAndVerifiesTheCertificate()</td>
+                <td>2</td>
+                <td class="duration" data-value="69000">000ms</td>
+                <td class="duration" data-value="34500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Down_Payment_steps.theUpgradeUserChangesTheDownPaymentForFinanceTo(java.lang.String)</td>
+                <td>5</td>
+                <td class="duration" data-value="96000">000ms</td>
+                <td class="duration" data-value="19200">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Down_Payment_steps.theUpgradeUserChangesTheDownPaymentForLeaseTo(java.lang.String)</td>
+                <td>4</td>
+                <td class="duration" data-value="141000">000ms</td>
+                <td class="duration" data-value="35250">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Down_Payment_steps.theUpgradeUserClicksSaveAndConfirmsTheSave()</td>
+                <td>8</td>
+                <td class="duration" data-value="195000">000ms</td>
+                <td class="duration" data-value="24375">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Down_Payment_steps.theUpgradeUserClicksTheViewDealButton()</td>
+                <td>4</td>
+                <td class="duration" data-value="114000">000ms</td>
+                <td class="duration" data-value="28500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Down_Payment_steps.theUpgradeUserGoesToMyGarage()</td>
+                <td>3</td>
+                <td class="duration" data-value="66000">000ms</td>
+                <td class="duration" data-value="22000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Down_Payment_steps.theUpgradeUserNotesTheCurrentFinanceInformation()</td>
+                <td>5</td>
+                <td class="duration" data-value="104000">000ms</td>
+                <td class="duration" data-value="20800">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Down_Payment_steps.theUpgradeUserNotesTheCurrentLeaseInformation()</td>
+                <td>4</td>
+                <td class="duration" data-value="185000">000ms</td>
+                <td class="duration" data-value="46250">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Down_Payment_steps.theUpgradeUserRefreshesThePage()</td>
+                <td>2</td>
+                <td class="duration" data-value="51000">000ms</td>
+                <td class="duration" data-value="25500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Down_Payment_steps.theUpgradeUserVerifiesTheFinanceInformationHasUpdated()</td>
+                <td>5</td>
+                <td class="duration" data-value="96000">000ms</td>
+                <td class="duration" data-value="19200">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Down_Payment_steps.theUpgradeUserVerifiesTheLeaseInformationHasUpdated()</td>
+                <td>4</td>
+                <td class="duration" data-value="109000">000ms</td>
+                <td class="duration" data-value="27250">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Finalize_Purchase_steps.theUpgradeUserClicksOnTheApplyForCreditButton()</td>
+                <td>4</td>
+                <td class="duration" data-value="99000">000ms</td>
+                <td class="duration" data-value="24750">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Finalize_Purchase_steps.theUpgradeUserClicksTheBackToDealButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Finalize_Purchase_steps.theUpgradeUserFillsOutAndSubmitsTheGetStartedPage()</td>
+                <td>2</td>
+                <td class="duration" data-value="68000">000ms</td>
+                <td class="duration" data-value="34000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Finalize_Purchase_steps.theUpgradeUserSubmitsTheLeaseOptions()</td>
+                <td>2</td>
+                <td class="duration" data-value="72000">000ms</td>
+                <td class="duration" data-value="36000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Finalize_Purchase_steps.theUpgradeUserSubmitsTheSignDrivePage()</td>
+                <td>2</td>
+                <td class="duration" data-value="68000">000ms</td>
+                <td class="duration" data-value="34000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Finalize_Purchase_steps.theUpgradeUserVehicleInformationIsSubmitted()</td>
+                <td>2</td>
+                <td class="duration" data-value="72000">000ms</td>
+                <td class="duration" data-value="36000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Hamburger_steps.theUpgradeUserClicksTheCloseButtonInTheHamburgerMenu()</td>
+                <td>2</td>
+                <td class="duration" data-value="131011000">131ms</td>
+                <td class="duration" data-value="65505500">065ms</td>
+                <td class="failed">50.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Hamburger_steps.theUpgradeUserClicksTheHamburgerIcon()</td>
+                <td>6</td>
+                <td class="duration" data-value="5361461000">5s 361ms</td>
+                <td class="duration" data-value="893576833">893ms</td>
+                <td class="failed">66.67%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Hamburger_steps.theUpgradeUserClicksTheLinkInTheMyGarageMenu(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="15835972000">15s 835ms</td>
+                <td class="duration" data-value="7917986000">7s 917ms</td>
+                <td class="failed">50.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Hamburger_steps.theUpgradeUserSeesAllTheHamburgerLinks()</td>
+                <td>2</td>
+                <td class="duration" data-value="29000">000ms</td>
+                <td class="duration" data-value="14500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Hamburger_steps.theUpgradeUserShouldSeeTheHomePage()</td>
+                <td>1</td>
+                <td class="duration" data-value="48318000">048ms</td>
+                <td class="duration" data-value="48318000">048ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Hamburger_steps.theUpgradeUserShouldSeeTheInsurePage()</td>
+                <td>1</td>
+                <td class="duration" data-value="41000">000ms</td>
+                <td class="duration" data-value="41000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Password_steps.theUpgradeUserAccessesMyPasswordViaTheHamburgerLink()</td>
+                <td>2</td>
+                <td class="duration" data-value="138000">000ms</td>
+                <td class="duration" data-value="69000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Password_steps.theUpgradeUserClicksOnUpdateTheButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Password_steps.theUpgradeUserClicksTheUpdateButtonToUpdateThePassword()</td>
+                <td>1</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Password_steps.theUpgradeUserEntersTheNewPasswordInTheNewPasswordField()</td>
+                <td>1</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Password_steps.theUpgradeUserEntersTheOldPasswordInTheOldPasswordField()</td>
+                <td>1</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Password_steps.theUpgradeUserLogsInWithTheUpdatedCredentials()</td>
+                <td>1</td>
+                <td class="duration" data-value="16000">000ms</td>
+                <td class="duration" data-value="16000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Password_steps.theUpgradeUserLogsOut()</td>
+                <td>1</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Password_steps.theUpgradeUserShouldBeOnTheUpdatePasswordPage()</td>
+                <td>2</td>
+                <td class="duration" data-value="32000">000ms</td>
+                <td class="duration" data-value="16000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Password_steps.theUpgradeUserShouldSeeTheErrorMessage(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="25000">000ms</td>
+                <td class="duration" data-value="12500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Password_steps.theUpgradeUserShouldSeeTheMyGarageMessage()</td>
+                <td>1</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Recently_Viewed_steps.theUpgradeUserCanSeeTheMostRecentlyViewedVehicle()</td>
+                <td>1</td>
+                <td class="duration" data-value="36000">000ms</td>
+                <td class="duration" data-value="36000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Recently_Viewed_steps.theUpgradeUserClicksOnShopNewCars()</td>
+                <td>3</td>
+                <td class="duration" data-value="282000">000ms</td>
+                <td class="duration" data-value="94000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Recently_Viewed_steps.theUpgradeUserDeletesTheRecentlyViewedVehicle()</td>
+                <td>1</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Recently_Viewed_steps.theUpgradeUserDoesnTSeeAnyVehicleInTheRecentlyViewedVehicles()</td>
+                <td>3</td>
+                <td class="duration" data-value="71000">000ms</td>
+                <td class="duration" data-value="23666">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Recently_Viewed_steps.theUpgradeUserReturnsToRecentlyViewedVehicles()</td>
+                <td>2</td>
+                <td class="duration" data-value="50000">000ms</td>
+                <td class="duration" data-value="25000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Recently_Viewed_steps.theUpgradeUserReturnsToRecentlyViewedVehiclesToSaveVehicle()</td>
+                <td>1</td>
+                <td class="duration" data-value="29000">000ms</td>
+                <td class="duration" data-value="29000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Recently_Viewed_steps.theUpgradeUserVerifiesVehicleIsSavedToTheSavedVehicleSection()</td>
+                <td>1</td>
+                <td class="duration" data-value="15000">000ms</td>
+                <td class="duration" data-value="15000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUpgradeUserClicksOnTheLinkFromTheTopNav(java.lang.String)</td>
+                <td>70</td>
+                <td class="duration" data-value="391512550000">6m 31s 512ms</td>
+                <td class="duration" data-value="5593036428">5s 593ms</td>
+                <td class="failed">95.71%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUpgradeUserShouldSeeTheMessage(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="60901000">060ms</td>
+                <td class="duration" data-value="60901000">060ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserClicksOnShopNewCarsButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="77000">000ms</td>
+                <td class="duration" data-value="77000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserClicksOnTheButtonInUP(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="5369596000">5s 369ms</td>
+                <td class="duration" data-value="2684798000">2s 684ms</td>
+                <td class="failed">50.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserClicksOnTheLink(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="3058651000">3s 058ms</td>
+                <td class="duration" data-value="3058651000">3s 058ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserCreatesAnNewProfileInUP()</td>
+                <td>63</td>
+                <td class="duration" data-value="3280694527000">54m 40s 694ms</td>
+                <td class="duration" data-value="52074516301">52s 074ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserEntersAInvalidEmailAddressInUP()</td>
+                <td>1</td>
+                <td class="duration" data-value="756498000">756ms</td>
+                <td class="duration" data-value="756498000">756ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserEntersAnInvalidPasswordInUP()</td>
+                <td>1</td>
+                <td class="duration" data-value="1245035000">1s 245ms</td>
+                <td class="duration" data-value="1245035000">1s 245ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserEntersValidInformationUnderTheGetStartedFormInUP()</td>
+                <td>1</td>
+                <td class="duration" data-value="5399840000">5s 399ms</td>
+                <td class="duration" data-value="5399840000">5s 399ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserFillOutTheHomeAddressInUPAndClickNext()</td>
+                <td>1</td>
+                <td class="duration" data-value="47007204000">47s 007ms</td>
+                <td class="duration" data-value="47007204000">47s 007ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserNavigatesToTheUpgradeHomePage()</td>
+                <td>71</td>
+                <td class="duration" data-value="70345159000">1m 10s 345ms</td>
+                <td class="duration" data-value="990776887">990ms</td>
+                <td class="failed">98.59%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserShouldReturnsToUpgradeHomepage()</td>
+                <td>3</td>
+                <td class="duration" data-value="74000">000ms</td>
+                <td class="duration" data-value="24666">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserShouldSeeTheChooseTradeOptionPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="35000">000ms</td>
+                <td class="duration" data-value="35000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserShouldSeeTheWelcomeBackMessage()</td>
+                <td>1</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.theUserShouldSeeTheWelcomeBackPageWithHardCodedFirstName()</td>
+                <td>1</td>
+                <td class="duration" data-value="19000">000ms</td>
+                <td class="duration" data-value="19000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Registration_SignIn_steps.userSignsOutFromTheUP()</td>
+                <td>4</td>
+                <td class="duration" data-value="93014952000">1m 33s 014ms</td>
+                <td class="duration" data-value="23253738000">23s 253ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeClicksOnTheSavedDealsButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="19000">000ms</td>
+                <td class="duration" data-value="19000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserChangesTheMileagePerYear()</td>
+                <td>1</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserClicksOnMyGarageToNavigateBackToSavedDealsPage()</td>
+                <td>4</td>
+                <td class="duration" data-value="97000">000ms</td>
+                <td class="duration" data-value="24250">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserClicksOnMyGarageToNavigateToSavedDealPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserClicksOnShopNewCarsToSelectAnotherVehicleToSave()</td>
+                <td>1</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserClicksOnShopNewCarsToSelectsAVehicleToSave()</td>
+                <td>2</td>
+                <td class="duration" data-value="100000">000ms</td>
+                <td class="duration" data-value="50000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserClicksOnTheSaveButton()</td>
+                <td>2</td>
+                <td class="duration" data-value="49000">000ms</td>
+                <td class="duration" data-value="24500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserClicksOnTheSaveButtonToConfirmSave()</td>
+                <td>2</td>
+                <td class="duration" data-value="72000">000ms</td>
+                <td class="duration" data-value="36000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserClicksOnTheSaveChangesButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserClicksOnTheViewDealButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="32000">000ms</td>
+                <td class="duration" data-value="32000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserConfirmsToSaveVehicle()</td>
+                <td>2</td>
+                <td class="duration" data-value="48000">000ms</td>
+                <td class="duration" data-value="24000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserDeletesTheSavedDeal()</td>
+                <td>1</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserGoesToTheDealPageForANewCar()</td>
+                <td>7</td>
+                <td class="duration" data-value="676000">000ms</td>
+                <td class="duration" data-value="96571">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserIsNoLongerPresentWithASavedDeal()</td>
+                <td>1</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserLandsOnTheDealPage()</td>
+                <td>2</td>
+                <td class="duration" data-value="49000">000ms</td>
+                <td class="duration" data-value="24500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserLandsOnTheSavedDealsPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserSwitchesToTheCashTab()</td>
+                <td>3</td>
+                <td class="duration" data-value="51000">000ms</td>
+                <td class="duration" data-value="17000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserSwitchesToTheLeaseTab()</td>
+                <td>11</td>
+                <td class="duration" data-value="286000">000ms</td>
+                <td class="duration" data-value="26000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserUpdatesTheDesiredDownPaymentWithTheSameValue()</td>
+                <td>1</td>
+                <td class="duration" data-value="21000">000ms</td>
+                <td class="duration" data-value="21000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserVerifiesMultipleSavedDeals()</td>
+                <td>1</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserVerifiesTheSavedVehicle()</td>
+                <td>1</td>
+                <td class="duration" data-value="34000">000ms</td>
+                <td class="duration" data-value="34000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SavedDeals_steps.theUpgradeUserVerifiesTheSavedVehicleToClicksOnTheViewDealButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_SignOut_steps.theUpgradeUserClicksOnTheLinkFromTheLeftNav(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="37000">000ms</td>
+                <td class="duration" data-value="37000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserCanSeeIncompleteAsTheOfferPrice()</td>
+                <td>2</td>
+                <td class="duration" data-value="22000">000ms</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserCanSeeTheOfferPrice()</td>
+                <td>1</td>
+                <td class="duration" data-value="18000">000ms</td>
+                <td class="duration" data-value="18000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserCanSeeTheOfferPriceNoLongerSaysIncomplete()</td>
+                <td>1</td>
+                <td class="duration" data-value="9000">000ms</td>
+                <td class="duration" data-value="9000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClickOnTheLinkFromMyGarage(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksOnAddATradeOnDealPage()</td>
+                <td>3</td>
+                <td class="duration" data-value="80000">000ms</td>
+                <td class="duration" data-value="26666">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksOnChangeTradeLink()</td>
+                <td>1</td>
+                <td class="duration" data-value="15000">000ms</td>
+                <td class="duration" data-value="15000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksOnChangeTradeToAddNoTrade()</td>
+                <td>1</td>
+                <td class="duration" data-value="50000">000ms</td>
+                <td class="duration" data-value="50000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksOnContinuesWithTheEstimatedPayoff()</td>
+                <td>3</td>
+                <td class="duration" data-value="35000">000ms</td>
+                <td class="duration" data-value="11666">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksOnEnterPayoffInformationButton()</td>
+                <td>2</td>
+                <td class="duration" data-value="22000">000ms</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksOnTheLinkFromMyGarage(java.lang.String)</td>
+                <td>4</td>
+                <td class="duration" data-value="83000">000ms</td>
+                <td class="duration" data-value="20750">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksOnTheVehicleDetailsLink()</td>
+                <td>1</td>
+                <td class="duration" data-value="24000">000ms</td>
+                <td class="duration" data-value="24000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksOnValueTradeViaHamburgerMenu()</td>
+                <td>6</td>
+                <td class="duration" data-value="261000">000ms</td>
+                <td class="duration" data-value="43500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksOnViewOffers()</td>
+                <td>2</td>
+                <td class="duration" data-value="28000">000ms</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksOnViewOffersButton()</td>
+                <td>5</td>
+                <td class="duration" data-value="65000">000ms</td>
+                <td class="duration" data-value="13000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksOnViewVehiclesButtonAndClicksOnTheVehicleForUpgrade()</td>
+                <td>4</td>
+                <td class="duration" data-value="44000">000ms</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksTheAddTradeButtonFromMyGarage()</td>
+                <td>1</td>
+                <td class="duration" data-value="32000">000ms</td>
+                <td class="duration" data-value="32000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksTheCompleteTradeOfferButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="10000">000ms</td>
+                <td class="duration" data-value="10000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksTheReturnALeaseButton()</td>
+                <td>2</td>
+                <td class="duration" data-value="27000">000ms</td>
+                <td class="duration" data-value="13500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserClicksTradeACar()</td>
+                <td>2</td>
+                <td class="duration" data-value="28000">000ms</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserConfirmsTheVehicleCondition()</td>
+                <td>3</td>
+                <td class="duration" data-value="44000">000ms</td>
+                <td class="duration" data-value="14666">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserIsOnTheTradeOfferDetailsPage()</td>
+                <td>3</td>
+                <td class="duration" data-value="43000">000ms</td>
+                <td class="duration" data-value="14333">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserIsPresentedWithTheTradeVehicle()</td>
+                <td>4</td>
+                <td class="duration" data-value="94000">000ms</td>
+                <td class="duration" data-value="23500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserLandsOnChooseATradeOptionPage()</td>
+                <td>5</td>
+                <td class="duration" data-value="70000">000ms</td>
+                <td class="duration" data-value="14000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserResubmitAllVehicleInformation()</td>
+                <td>1</td>
+                <td class="duration" data-value="9000">000ms</td>
+                <td class="duration" data-value="9000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserReturnsToMyTrades()</td>
+                <td>4</td>
+                <td class="duration" data-value="53000">000ms</td>
+                <td class="duration" data-value="13250">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserReturnsToMyTradesPage()</td>
+                <td>4</td>
+                <td class="duration" data-value="46000">000ms</td>
+                <td class="duration" data-value="11500">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSCurrentPaymentInformationIsSubmitted()</td>
+                <td>5</td>
+                <td class="duration" data-value="58000">000ms</td>
+                <td class="duration" data-value="11600">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSFinanceCompanyIsSubmitted()</td>
+                <td>5</td>
+                <td class="duration" data-value="57000">000ms</td>
+                <td class="duration" data-value="11400">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSInformationIsSubmitted()</td>
+                <td>5</td>
+                <td class="duration" data-value="60000">000ms</td>
+                <td class="duration" data-value="12000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSeesTheChooseTradeOptionPageAfterClickingAddTradeButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="6000">000ms</td>
+                <td class="duration" data-value="6000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSeesThePreviousVehicleListedOnTheChooseTradeOptionPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="7000">000ms</td>
+                <td class="duration" data-value="7000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSubmitsALeaseVehicleTradeIn()</td>
+                <td>1</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSubmitsATradeInVehicle()</td>
+                <td>3</td>
+                <td class="duration" data-value="54000">000ms</td>
+                <td class="duration" data-value="18000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSubmitsATradeInVehicleTheDeal()</td>
+                <td>4</td>
+                <td class="duration" data-value="91000">000ms</td>
+                <td class="duration" data-value="22750">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSubmitsAVIN()</td>
+                <td>5</td>
+                <td class="duration" data-value="64000">000ms</td>
+                <td class="duration" data-value="12800">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSubmitsAllPayoffInformation()</td>
+                <td>2</td>
+                <td class="duration" data-value="22000">000ms</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSubmitsAnotherTradeInVehicle()</td>
+                <td>1</td>
+                <td class="duration" data-value="9000">000ms</td>
+                <td class="duration" data-value="9000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSubmitsLeaseVehicleInformation()</td>
+                <td>2</td>
+                <td class="duration" data-value="22000">000ms</td>
+                <td class="duration" data-value="11000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSubmitsVehicleFeatures()</td>
+                <td>3</td>
+                <td class="duration" data-value="37000">000ms</td>
+                <td class="duration" data-value="12333">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSubmitsVehicleInformation()</td>
+                <td>3</td>
+                <td class="duration" data-value="37000">000ms</td>
+                <td class="duration" data-value="12333">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserSwitchToFinanceTab()</td>
+                <td>16</td>
+                <td class="duration" data-value="437000">000ms</td>
+                <td class="duration" data-value="27312">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserVerifiesNoTradeVehicleHasBeenAdded()</td>
+                <td>1</td>
+                <td class="duration" data-value="39000">000ms</td>
+                <td class="duration" data-value="39000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepDef.Upgrade_Trades_steps.theUpgradeUserViewsToVehicleAfterReturningToMyTradesPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="10000">000ms</td>
+                <td class="duration" data-value="10000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>185</td>
+              <td>824</td>
+              <td class="duration">1h 21m 42s 444ms</td>
+              <td class="duration">5s 949ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
