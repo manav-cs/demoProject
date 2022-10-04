@@ -36,7 +36,7 @@ public class Setup {
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--log-level=3");
             options.addArguments("--output=/dev/null");
-            System.setProperty("webdriver.chrome.silentOutput", "true");
+            System.setProperty("usr/bin/google-chrome", "true");
             caps.setCapability(ChromeOptions.CAPABILITY, options);
             driver = new ChromeDriver(options);
         } else if (driverType.equalsIgnoreCase("ff")) {
