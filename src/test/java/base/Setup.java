@@ -21,7 +21,7 @@ public class Setup {
 
     public WebDriver initDriver(String driverType) {
         if (driverType.equalsIgnoreCase("ch")) {
-            WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().driverVersion("106.0.5249.91").setup();
             ChromeOptions options = new ChromeOptions();
             //options.setHeadless(true);
             options.addArguments("--incognito");
