@@ -51,9 +51,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                158,
-                71,
-                447,
+                8,
+                2,
+                6,
                 0,
                 0
             ],
@@ -94,7 +94,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 676) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 16) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
@@ -107,8 +107,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                60,
-                14
+                1,
+                2
             ],
             backgroundColor: [
                 "#00B000",
@@ -144,7 +144,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 74) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 3) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
@@ -158,7 +158,7 @@ $(document).ready(function() {
         datasets: [{
             data: [
                    0,
-                   18
+                   1
                ],
                backgroundColor: [
                 "#00B000",
@@ -191,7 +191,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 18) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
@@ -233,7 +233,7 @@ $(document).ready(function() {
           <tr class="info">
             <td>qa-automation-tests</td>
                           <td>1</td>
-                        <td>28 Sep 2022, 21:02</td>
+                        <td>04 Oct 2022, 11:39</td>
           </tr>
         </tbody>
       </table>
@@ -323,305 +323,50 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-dealPageCheckBoxSorting-feature.html">CarSaver Upgrade (UP) user verifies check box presence and sorting on deal page</a></td>
-        
-        <td  class="passed"    >7</td>
-        <td >0</td>
-        <td class="total">7</td>
-        <td      class="passed"    >14</td>
-        <td      class="failed"    >7</td>
-        <td     class="skipped"   >41</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">62</td>
-        <td class="duration" data-value="419563174000">6m 59s 563ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-myTrades-feature.html">Nissan Upgrade users can add vehicles to My Trades in My Garage</a></td>
-        
-        <td  class="passed"    >7</td>
-        <td >0</td>
-        <td class="total">7</td>
-        <td      class="passed"    >14</td>
-        <td      class="failed"    >7</td>
-        <td     class="skipped"   >69</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">90</td>
-        <td class="duration" data-value="418509103000">6m 58s 509ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-changeTrade-feature.html">Nissan Upgrade users can change a trade</a></td>
-        
-        <td  class="passed"    >3</td>
-        <td >0</td>
-        <td class="total">3</td>
-        <td      class="passed"    >6</td>
-        <td      class="failed"    >3</td>
-        <td     class="skipped"   >20</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">29</td>
-        <td class="duration" data-value="180581795000">3m 581ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-finalizePurchase-feature.html">Nissan Upgrade users can finalize the purchase</a></td>
-        
-        <td  class="passed"    >2</td>
-        <td  class="failed"    >1</td>
-        <td class="total">3</td>
-        <td      class="passed"    >4</td>
-        <td      class="failed"    >2</td>
-        <td     class="skipped"   >40</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">46</td>
-        <td class="duration" data-value="120010993000">2m 010ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-returnLease-feature.html">Nissan Upgrade users can return a lease</a></td>
-        
-        <td  class="passed"    >3</td>
-        <td >0</td>
-        <td class="total">3</td>
-        <td      class="passed"    >6</td>
-        <td      class="failed"    >3</td>
-        <td     class="skipped"   >39</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">48</td>
-        <td class="duration" data-value="179602462000">2m 59s 602ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-desiredDownPayment-feature.html">Nissan Upgrade users can save and change desired down payment</a></td>
-        
-        <td  class="passed"    >7</td>
-        <td >0</td>
-        <td class="total">7</td>
-        <td      class="passed"    >14</td>
-        <td      class="failed"    >7</td>
-        <td     class="skipped"   >64</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">85</td>
-        <td class="duration" data-value="416968405000">6m 56s 968ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-savedDeals-feature.html">Nissan Upgrade users can save deals</a></td>
-        
-        <td  class="passed"    >5</td>
-        <td >0</td>
-        <td class="total">5</td>
-        <td      class="passed"    >10</td>
-        <td      class="failed"    >5</td>
-        <td     class="skipped"   >27</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">42</td>
-        <td class="duration" data-value="296518668000">4m 56s 518ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-financeLeaseCash-feature.html">Nissan Upgrade users can switch between finance lease and cash tabs</a></td>
-        
-        <td  class="passed"    >2</td>
-        <td >0</td>
-        <td class="total">2</td>
-        <td      class="passed"    >4</td>
-        <td      class="failed"    >2</td>
-        <td     class="skipped"   >19</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">25</td>
-        <td class="duration" data-value="117465335000">1m 57s 465ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-recentlyViewedVehicles-feature.html">Nissan Upgrade users can view recently viewed vehicles</a></td>
-        
-        <td  class="passed"    >4</td>
-        <td >0</td>
-        <td class="total">4</td>
-        <td      class="passed"    >8</td>
-        <td      class="failed"    >4</td>
-        <td     class="skipped"   >13</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">25</td>
-        <td class="duration" data-value="237506218000">3m 57s 506ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-hamburgerMenu-feature.html">Upgrade Hamburger Icon functionality</a></td>
-        
-        <td  class="passed"    >1</td>
-        <td  class="failed"    >3</td>
-        <td class="total">4</td>
-        <td      class="passed"    >20</td>
-        <td      class="failed"    >3</td>
-        <td     class="skipped"   >11</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">34</td>
-        <td class="duration" data-value="109145733000">1m 49s 145ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-myAccount-feature.html">Upgrade My Account functionality under My Garage</a></td>
-        
-        <td  class="passed"    >10</td>
-        <td >0</td>
-        <td class="total">10</td>
-        <td      class="passed"    >20</td>
-        <td      class="failed"    >10</td>
-        <td     class="skipped"   >40</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">70</td>
-        <td class="duration" data-value="593967698000">9m 53s 967ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-myAddress-feature.html">Upgrade My Address functionality under My Garage</a></td>
-        
-        <td  class="passed"    >3</td>
-        <td >0</td>
-        <td class="total">3</td>
-        <td      class="passed"    >6</td>
-        <td      class="failed"    >3</td>
-        <td     class="skipped"   >11</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">20</td>
-        <td class="duration" data-value="179428841000">2m 59s 428ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-myAppointments-feature.html">Upgrade My Appointments functionality under My Garage</a></td>
-        
-        <td >0</td>
-        <td  class="failed"    >4</td>
-        <td class="total">4</td>
-        <td      class="passed"    >8</td>
-        <td      class="failed"    >4</td>
-        <td     class="skipped"   >10</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">22</td>
-        <td class="duration" data-value="237115928000">3m 57s 115ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-myPassword-feature.html">Upgrade My Password functionality under My Garage</a></td>
-        
-        <td  class="passed"    >2</td>
-        <td >0</td>
-        <td class="total">2</td>
-        <td      class="passed"    >4</td>
-        <td      class="failed"    >2</td>
-        <td     class="skipped"   >13</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">19</td>
-        <td class="duration" data-value="118400293000">1m 58s 400ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-registration-feature.html">Upgrade Registration</a></td>
-        
-        <td >0</td>
-        <td  class="failed"    >2</td>
-        <td class="total">2</td>
-        <td      class="passed"    >5</td>
-        <td      class="failed"    >2</td>
-        <td     class="skipped"   >6</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">13</td>
-        <td class="duration" data-value="118960857000">1m 58s 960ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
         <td class="tagname"><a href="file-src-test-java-features-Upgrade-signIn-feature.html">Upgrade Sign In</a></td>
         
         <td  class="passed"    >1</td>
         <td  class="failed"    >2</td>
         <td class="total">3</td>
-        <td      class="passed"    >9</td>
+        <td      class="passed"    >8</td>
         <td      class="failed"    >2</td>
-        <td     class="skipped"   >5</td>
+        <td     class="skipped"   >6</td>
         <td >0</td>
         <td >0</td>
         <td class="total">16</td>
-        <td class="duration" data-value="128151831000">2m 8s 151ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-signOut-feature.html">Upgrade Sign Out functionality under the My Garage & Hamburger menu</a></td>
-        
-        <td >0</td>
-        <td  class="failed"    >2</td>
-        <td class="total">2</td>
-        <td      class="passed"    >6</td>
-        <td      class="failed"    >2</td>
-        <td     class="skipped"   >3</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">11</td>
-        <td class="duration" data-value="121910565000">2m 1s 910ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-Upgrade-portal_customers-feature.html">Upgrade customer info into Portal Customer Page</a></td>
-        
-        <td  class="passed"    >3</td>
-        <td >0</td>
-        <td class="total">3</td>
-        <td >0</td>
-        <td      class="failed"    >3</td>
-        <td     class="skipped"   >16</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">19</td>
-        <td class="duration" data-value="163965458000">2m 43s 965ms</td>
+        <td class="duration" data-value="74625874000">1m 14s 625ms</td>
         <td class="failed">Failed</td>
       </tr>
       </tbody>
 
   <tfoot class="total">
     <tr>
-      <td>18</td>
-            <td>60</td>
-      <td>14</td>
-      <td>74</td>
-      <td>158</td>
-      <td>71</td>
-      <td>447</td>
+      <td>1</td>
+            <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>8</td>
+      <td>2</td>
+      <td>6</td>
       <td>0</td>
       <td>0</td>
-      <td>676</td>
-      <td class="duration">1h 9m 17s 773ms</td>
+      <td>16</td>
+      <td class="duration">1m 14s 625ms</td>
       <td></td>
     </tr>
     <tr>
       <td></td>
-            <td>81.08%</td>
-      <td>18.92%</td>
+            <td>33.33%</td>
+      <td>66.67%</td>
       <td></td>
-      <td>23.37%</td>
-      <td>10.50%</td>
-      <td>66.12%</td>
+      <td>50.00%</td>
+      <td>12.50%</td>
+      <td>37.50%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
       <td></td>
-      <td>18.92%</td>
+      <td>66.67%</td>
     </tr>
   </tfoot>
 </table>

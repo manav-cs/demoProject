@@ -1,0 +1,68 @@
+# Query: mvn clean verify -Dthreads=single -Denv=stage_up -Dbrowser=ch -Dcucumber.filter.tags="@UP" -Dmaven.test.failure.ignore=true
+# ContextLines: 1
+
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:11-jdk
+    working_directory: ~/demoProject
+    environment:
+      # Customize the JVM maximum heap limit
+      MAVEN_OPTS: -Xmx3200m  
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "pom.xml" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: mvn dependency:go-offline
+      # - run:
+      #     name: Install Chrome latest version
+      #     command: |
+      #       sudo apt update
+      #       sudo apt install wget
+      #       wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      #       sudo apt-get install -y fonts-liberation
+      #       sudo apt-get install -y libgbm1
+      #       sudo apt-get install -y libnspr4
+      #       sudo apt-get install -y libnss3
+      #       sudo apt-get install -y xdg-utils
+      #       sudo dpkg -i google-chrome-stable_current_amd64.deb
+      #       sudo apt-get install -f
+      #       google-chrome --version
+
+      # - run:
+      #     name: Install Chromedriver latest version
+      #     command: |
+      #       sudo apt update
+      #       sudo apt install wget
+      #       sudo apt-get install unzip
+      #       wget https://chromedriver.storage.googleapis.com/92.0.4515.107/chromedriver_linux64.zip
+      #       unzip chromedriver_linux64.zip
+      #       sudo mv chromedriver /usr/bin/chromedriver
+      #       sudo chown root:root /usr/bin/chromedriver
+      #       sudo chmod +x /usr/bin/chromedriver
+      #       chromedriver --url-base=/wd/hub
+
+      - run:
+          name: Running X virtual framebuffer
+          command: Xvfb :0 -ac &
+      - run:
+          name: Run Tests
+          command: |
+            export DISPLAY=:99
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: v1-dependencies-{{ checksum "pom.xml" }}
+      # run tests!
+      - run: mvn clean test
+      - store_artifacts: 
+          path: target/surefire-reports
+          destination: tr1
+      - store_test_results:
+          path: target/surefire-reports
