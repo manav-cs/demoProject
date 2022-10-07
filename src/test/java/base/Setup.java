@@ -21,11 +21,9 @@ public class Setup {
 
     public WebDriver initDriver(String driverType) {
         if (driverType.equalsIgnoreCase("ch")) {
-           // WebDriverManager.chromedriver().setup();
-            System.setProperty("webdriver.chrome.driver", "/Users/manav/Downloads/chromedriver.exe");
+            WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             //options.setHeadless(true);
-            options.setBinary("/Users/manav/Downloads/chromedriver.exe");
             options.addArguments("--incognito");
             options.addArguments("--test-type");
             options.addArguments("--disable-popup-blocking");
@@ -38,8 +36,8 @@ public class Setup {
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--log-level=3");
             options.addArguments("--output=/dev/null");
-
-           // System.setProperty("webdriver.chrome.silentOutput", "true");
+           // System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+            System.setProperty("webdriver.chrome.silentOutput", "true");
             caps.setCapability(ChromeOptions.CAPABILITY, options);
             driver = new ChromeDriver(options);
         } else if (driverType.equalsIgnoreCase("ff")) {
