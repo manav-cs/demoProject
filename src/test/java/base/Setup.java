@@ -21,25 +21,26 @@ public class Setup {
 
     public WebDriver initDriver(String driverType) {
         if (driverType.equalsIgnoreCase("ch")) {
-            WebDriverManager.chromedriver().setup();
-            ChromeOptions options = new ChromeOptions();
+           // WebDriverManager.chromedriver().setup();
+  //          ChromeOptions options = new ChromeOptions();
             //options.setHeadless(true);
-            options.addArguments("--incognito");
-            options.addArguments("--test-type");
-            options.addArguments("--disable-popup-blocking");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-gpu");
-            options.addArguments("--disable-crash-reporter");
-            options.addArguments("--disable-extensions");
-            options.addArguments("--disable-in-process-stack-traces");
-            options.addArguments("--disable-logging");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--log-level=3");
-            options.addArguments("--output=/dev/null");
-           // System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
-            System.setProperty("webdriver.chrome.silentOutput", "true");
-            caps.setCapability(ChromeOptions.CAPABILITY, options);
-            driver = new ChromeDriver(options);
+//            options.setBinary("/Users/manav/Downloads/chromedriver");
+//            options.addArguments("--incognito");
+//            options.addArguments("--test-type");
+//            options.addArguments("--disable-popup-blocking");
+//            options.addArguments("--no-sandbox");
+//            options.addArguments("--disable-gpu");
+//            options.addArguments("--disable-crash-reporter");
+//            options.addArguments("--disable-extensions");
+//            options.addArguments("--disable-in-process-stack-traces");
+//            options.addArguments("--disable-logging");
+//            options.addArguments("--disable-dev-shm-usage");
+//            options.addArguments("--log-level=3");
+//            options.addArguments("--output=/dev/null");
+            System.setProperty("webdriver.chrome.driver", "/Users/manav/Downloads/chromedriver");
+         //  System.setProperty("webdriver.chrome.silentOutput", "true");
+          //  caps.setCapability(ChromeOptions.CAPABILITY, options);
+            driver = new ChromeDriver();
         } else if (driverType.equalsIgnoreCase("ff")) {
             WebDriverManager.firefoxdriver().setup();
             FirefoxOptions options = new FirefoxOptions();
