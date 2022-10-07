@@ -25,7 +25,7 @@ public class Setup {
             ChromeDriverManager.getInstance().setup();
             ChromeOptions options = new ChromeOptions();
             //options.setHeadless(true);
-            options.setBinary("/Users/manav/Downloads/chromedriver");
+          //  options.setBinary("/Users/manav/Downloads/chromedriver");
             options.addArguments("--incognito");
             options.addArguments("--test-type");
             options.addArguments("--disable-popup-blocking");
