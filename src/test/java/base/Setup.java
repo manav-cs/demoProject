@@ -1,7 +1,6 @@
 package base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
@@ -22,10 +21,10 @@ public class Setup {
 
     public WebDriver initDriver(String driverType) {
         if (driverType.equalsIgnoreCase("ch")) {
-            ChromeDriverManager.getInstance().setup();
+            WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             //options.setHeadless(true);
-          //  options.setBinary("/Users/manav/Downloads/chromedriver");
+            //options.setBinary("/Users/manav/Downloads/chromedriver");
             options.addArguments("--incognito");
             options.addArguments("--test-type");
             options.addArguments("--disable-popup-blocking");
