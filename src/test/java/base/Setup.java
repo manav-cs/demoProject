@@ -22,10 +22,10 @@ public class Setup {
     public WebDriver initDriver(String driverType) {
         if (driverType.equalsIgnoreCase("ch")) {
            // WebDriverManager.chromedriver().setup();
-            System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "/Users/manav/Downloads/chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
             //options.setHeadless(true);
-            options.setBinary("/usr/bin/google-chrome/chromedriver.exe");
+            options.setBinary("/Users/manav/Downloads/chromedriver.exe");
             options.addArguments("--incognito");
             options.addArguments("--test-type");
             options.addArguments("--disable-popup-blocking");
