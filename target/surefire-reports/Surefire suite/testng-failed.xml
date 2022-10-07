@@ -8,7 +8,7 @@
           <include name="sendEmailReport"/>
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0 1 2"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- RunCucumberTest -->
     </classes>

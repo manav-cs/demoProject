@@ -23,7 +23,7 @@ public class Setup {
         if (driverType.equalsIgnoreCase("ch")) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            //options.setHeadless(true);
+            options.setHeadless(true);
             //options.setBinary("/Users/manav/Downloads/chromedriver");
             options.addArguments("--incognito");
             options.addArguments("--test-type");
