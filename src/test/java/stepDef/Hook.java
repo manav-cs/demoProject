@@ -53,7 +53,7 @@ public class Hook {
     public void initialize() {
         setup = new Setup();
         if (Strings.isNullOrEmpty(browserType)) {
-            browserType = "ch";
+            browserType = "ff";
         }
         if (Strings.isNullOrEmpty(baseURL)) {
             baseURL = "stage_up";
