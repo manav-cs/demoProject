@@ -1,0 +1,15 @@
+
+\
+java:S11923"FDefine a constant instead of duplicating this literal "false" 4 times.(ÙéìÍ
+a
+java:S1192"KDefine a constant instead of duplicating this literal "access_key" 3 times.(½õ¤
+0
+java:S1220""Move this file to a named package.
+i
+java:S1450"SRemove the "task" field and declare it as a local variable in the relevant methods.(Šõèµ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Šâ¨¤
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(Ú°ú§ÿÿÿÿÿ
+^
+java:S5361@"HReplace this call to "replaceAll()" by a call to the "replace()" method.(±à¯°
+N	java:S106M"9Replace this use of System.out or System.err by a logger.(¸´ê€
+S	java:S106O"9Replace this use of System.out or System.err by a logger.(ÏˆÈøÿÿÿÿ
