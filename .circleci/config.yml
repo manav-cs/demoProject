@@ -15,6 +15,7 @@ jobs:
       MAVEN_OPTS: -Xmx3200m  
     steps:
       - checkout
+      - run: go test -v $(go list ./... | circleci tests split --split-by=timings)
       # Download and cache dependencies
       - restore_cache:
           keys:
