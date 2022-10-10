@@ -39,7 +39,7 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
       # run tests!
-      - run: mvn clean verify -Denv=prod_carSaver -Dbrowser=ch -Dcucumber.filter.tags="@NE" -Dmaven.test.failure.ignore=true 
+      - run: mvn clean install 
 
       - store_artifacts: 
           path: target/surefire-reports
