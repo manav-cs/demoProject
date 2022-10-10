@@ -8,7 +8,7 @@ jobs:
       - image: cimg/go:1.17
       - image: cimg/postgres:14.5.0
     working_directory: ~/demoProject
-    parallelism: 10
+    #parallelism: 
     resource_class: large
     environment:
       # Customize the JVM maximum heap limit
@@ -39,7 +39,7 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
       # run tests!
-      - run: mvn clean verify -Denv=prod_carSaver -Dbrowser=ch -Dcucumber.filter.tags="NE" -Dmaven.test.failure.ignore=true 
+      - run: mvn clean verify -Denv=prod_carSaver -Dbrowser=ch -Dcucumber.filter.tags="@NE" -Dmaven.test.failure.ignore=true 
 
       - store_artifacts: 
           path: target/surefire-reports
