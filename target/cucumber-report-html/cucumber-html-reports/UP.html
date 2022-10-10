@@ -76,7 +76,7 @@ $(document).ready(function() {
           <tr class="info">
             <td>qa-automation-tests</td>
                           <td>1</td>
-                        <td>07 Oct 2022, 16:38</td>
+                        <td>10 Oct 2022, 11:40</td>
           </tr>
         </tbody>
       </table>
@@ -126,13 +126,13 @@ $(document).ready(function() {
                     <td  class="passed"    >1</td>
           <td  class="failed"    >2</td>
           <td class="total">3</td>
-          <td      class="passed"    >5</td>
+          <td      class="passed"    >6</td>
           <td      class="failed"    >2</td>
-          <td     class="skipped"   >6</td>
+          <td     class="skipped"   >5</td>
           <td >0</td>
           <td >0</td>
           <td class="total">13</td>
-          <td class="duration" data-value="38640446000">38s 640ms</td>
+          <td class="duration" data-value="122351437000">2m 2s 351ms</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -198,7 +198,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
                           <span class="location name">stepDef.Hook.before(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">10s 970ms</span>
+  <span class="lead-duration duration">9s 371ms</span>
 
           </div>
 
@@ -233,7 +233,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">the Upgrade user creates a new profile</span>
   
-  <span class="lead-duration duration">23s 287ms</span>
+  <span class="lead-duration duration">55s 607ms</span>
 
   </div>
 
@@ -245,15 +245,22 @@ $(document).ready(function() {
           <a>Error message</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: headless chrome=105.0.5195.125)
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h1[contains(text(),'Choose Trade Option')]' (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at base.GenericFunctions.waitForElementToBeVisible(GenericFunctions.java:33)
+	at pageObject.Upgrade_Registration_SignIn_page.verifyChooseTradeOption(Upgrade_Registration_SignIn_page.java:50)
+	at stepDef.Upgrade_Registration_SignIn_steps.theUserCreatesAnNewProfileInUP(Upgrade_Registration_SignIn_steps.java:87)
+	at ✽.the Upgrade user creates a new profile(file:///Users/manav/Documents/DemoProject/src/test/java/features/Upgrade/signIn.feature:8)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[contains(text(),'Choose Trade Option')]"}
+  (Session info: chrome=105.0.5195.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.0', revision: '87802e897b'
-System info: host: 'ip-192-168-0-104.ec2.internal', ip: 'fe80:0:0:0:4af:d5dc:4a63:b3c%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.6', java.version: '18.0.2.1'
+System info: host: 'SF-LAP-412.local', ip: 'fe80:0:0:0:4af:d5dc:4a63:b3c%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.6', java.version: '18.0.2.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [94751049cc8febd8b69cb3b8c5776f63, clickElement {id=3c420481-b048-4ac3-8c89-5d8d18756068}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.125, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: /var/folders/th/f4yf398x0lb...}, goog:chromeOptions: {debuggerAddress: localhost:52976}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52976/devtoo..., se:cdpVersion: 105.0.5195.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on MAC (94751049cc8febd8b69cb3b8c5776f63)] -> xpath: //button]
-Session ID: 94751049cc8febd8b69cb3b8c5776f63
+Command: [9a38fefad16198131610015971393137, findElement {using=xpath, value=//h1[contains(text(),'Choose Trade Option')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.125, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: /var/folders/th/f4yf398x0lb...}, goog:chromeOptions: {debuggerAddress: localhost:50456}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50456/devtoo..., se:cdpVersion: 105.0.5195.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a38fefad16198131610015971393137
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -264,15 +271,54 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at base.GenericFunctions.waitForElementToBeVisible(GenericFunctions.java:33)
+	at pageObject.Upgrade_Registration_SignIn_page.verifyChooseTradeOption(Upgrade_Registration_SignIn_page.java:50)
+	at stepDef.Upgrade_Registration_SignIn_steps.theUserCreatesAnNewProfileInUP(Upgrade_Registration_SignIn_steps.java:87)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy33.click(Unknown Source)
-	at pageObject.CSE_Registration_SignIn_page.cseClickNextButtonFromEnterYourHomeAddress(CSE_Registration_SignIn_page.java:256)
-	at stepDef.Upgrade_Registration_SignIn_steps.theUserCreatesAnNewProfileInUP(Upgrade_Registration_SignIn_steps.java:86)
-	at ✽.the Upgrade user creates a new profile(file:///Users/manav/Documents/DemoProject/src/test/java/features/Upgrade/signIn.feature:8)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre>
       </div>
     </div>
@@ -395,7 +441,7 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
             <span class="keyword indention">After</span>
                           <span class="location name">stepDef.Hook.tearDown(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">267ms</span>
+  <span class="lead-duration duration">1s 326ms</span>
 
           </div>
 
@@ -405,12 +451,12 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
           
   <div class="embeddings inner-level">
                 <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding_embedding_1088603474" class="collapsable-control">
+    <div data-toggle="collapse" data-target="#embedding_embedding_-805375422" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1088603474.png" target="_blank"><span class="download-button glyphicon glyphicon-download-alt"></span></a>
+      <a href="embeddings/embedding_-805375422.png" target="_blank"><span class="download-button glyphicon glyphicon-download-alt"></span></a>
     </div>
-    <div id="embedding_embedding_1088603474" class="collapse collapsable-detail">
-      <span class="embedding-content"><img src="embeddings/embedding_1088603474.png"></span>
+    <div id="embedding_embedding_-805375422" class="collapse collapsable-detail">
+      <span class="embedding-content"><img src="embeddings/embedding_-805375422.png"></span>
     </div>
   </div>
         </div>
@@ -471,7 +517,7 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
             <span class="keyword indention">Before</span>
                           <span class="location name">stepDef.Hook.before(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">9s 928ms</span>
+  <span class="lead-duration duration">8s 133ms</span>
 
           </div>
 
@@ -502,35 +548,15 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
   <div id="steps-8" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">And</span>
   <span class="name">the Upgrade user login to the account</span>
   
-  <span class="lead-duration duration">2s 398ms</span>
+  <span class="lead-duration duration">8s 895ms</span>
 
   </div>
 
         
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
-          <a>Error message</a>
-      </div>
-      <div id="msg-9" class="collapse collapsable-details">
-        <pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:92)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy33.sendKeys(Unknown Source)
-	at pageObject.Upgrade_Registration_SignIn_page.upLoginEnterEmail(Upgrade_Registration_SignIn_page.java:62)
-	at stepDef.Upgrade_Appointment_steps.theUserSignIntoUP(Upgrade_Appointment_steps.java:28)
-	at ✽.the Upgrade user login to the account(file:///Users/manav/Documents/DemoProject/src/test/java/features/Upgrade/signIn.feature:16)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
         
@@ -543,15 +569,100 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief failed">
   <span class="keyword indention">When</span>
   <span class="name">the Upgrade user signs out via the hamburger menu</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">45s 635ms</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Error message</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@aria-label='Open the menu']' (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at base.GenericFunctions.waitForElementToBeVisible(GenericFunctions.java:33)
+	at pageObject.Upgrade_Registration_SignIn_page.upHamburgerBtn(Upgrade_Registration_SignIn_page.java:123)
+	at stepDef.Upgrade_Registration_SignIn_steps.userSignsOutFromTheUP(Upgrade_Registration_SignIn_steps.java:91)
+	at ✽.the Upgrade user signs out via the hamburger menu(file:///Users/manav/Documents/DemoProject/src/test/java/features/Upgrade/signIn.feature:17)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@aria-label='Open the menu']"}
+  (Session info: chrome=105.0.5195.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.0', revision: '87802e897b'
+System info: host: 'SF-LAP-412.local', ip: 'fe80:0:0:0:4af:d5dc:4a63:b3c%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.6', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bdd1b3dbb3f068b7f6c415474d68cda6, findElement {using=xpath, value=//a[@aria-label='Open the menu']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.125, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: /var/folders/th/f4yf398x0lb...}, goog:chromeOptions: {debuggerAddress: localhost:50777}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50777/devtoo..., se:cdpVersion: 105.0.5195.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bdd1b3dbb3f068b7f6c415474d68cda6
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at base.GenericFunctions.waitForElementToBeVisible(GenericFunctions.java:33)
+	at pageObject.Upgrade_Registration_SignIn_page.upHamburgerBtn(Upgrade_Registration_SignIn_page.java:123)
+	at stepDef.Upgrade_Registration_SignIn_steps.userSignsOutFromTheUP(Upgrade_Registration_SignIn_steps.java:91)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
         
@@ -607,7 +718,7 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
             <span class="keyword indention">After</span>
                           <span class="location name">stepDef.Hook.tearDown(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">478ms</span>
+  <span class="lead-duration duration">1s 300ms</span>
 
           </div>
 
@@ -617,12 +728,12 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
           
   <div class="embeddings inner-level">
                 <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding_embedding_-88523313" class="collapsable-control">
+    <div data-toggle="collapse" data-target="#embedding_embedding_-748834984" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-88523313.png" target="_blank"><span class="download-button glyphicon glyphicon-download-alt"></span></a>
+      <a href="embeddings/embedding_-748834984.png" target="_blank"><span class="download-button glyphicon glyphicon-download-alt"></span></a>
     </div>
-    <div id="embedding_embedding_-88523313" class="collapse collapsable-detail">
-      <span class="embedding-content"><img src="embeddings/embedding_-88523313.png"></span>
+    <div id="embedding_embedding_-748834984" class="collapse collapsable-detail">
+      <span class="embedding-content"><img src="embeddings/embedding_-748834984.png"></span>
     </div>
   </div>
         </div>
@@ -683,7 +794,7 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
             <span class="keyword indention">Before</span>
                           <span class="location name">stepDef.Hook.before(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">10s 010ms</span>
+  <span class="lead-duration duration">8s 308ms</span>
 
           </div>
 
@@ -718,7 +829,7 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
   <span class="keyword indention">And</span>
   <span class="name">the Upgrade user clicks on the "Sign in here" link from the top nav</span>
   
-  <span class="lead-duration duration">5s 551ms</span>
+  <span class="lead-duration duration">5s 274ms</span>
 
   </div>
 
@@ -739,7 +850,7 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
   <span class="keyword indention">And</span>
   <span class="name">the user enters a invalid email address in UP</span>
   
-  <span class="lead-duration duration">855ms</span>
+  <span class="lead-duration duration">721ms</span>
 
   </div>
 
@@ -760,7 +871,7 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
   <span class="keyword indention">And</span>
   <span class="name">the user enters an invalid password in UP</span>
   
-  <span class="lead-duration duration">1s 115ms</span>
+  <span class="lead-duration duration">1s 302ms</span>
 
   </div>
 
@@ -781,7 +892,7 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
   <span class="keyword indention">When</span>
   <span class="name">the user clicks on the "Sign In" button in UP</span>
   
-  <span class="lead-duration duration">5s 363ms</span>
+  <span class="lead-duration duration">4s 849ms</span>
 
   </div>
 
@@ -802,7 +913,7 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
   <span class="keyword indention">Then</span>
   <span class="name">the Upgrade user should see the "The email address or password are not correct" message</span>
   
-  <span class="lead-duration duration">068ms</span>
+  <span class="lead-duration duration">064ms</span>
 
   </div>
 
@@ -841,7 +952,7 @@ Session ID: 94751049cc8febd8b69cb3b8c5776f63
             <span class="keyword indention">After</span>
                           <span class="location name">stepDef.Hook.tearDown(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">067ms</span>
+  <span class="lead-duration duration">091ms</span>
 
           </div>
 
