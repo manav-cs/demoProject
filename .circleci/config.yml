@@ -15,7 +15,6 @@ jobs:
       MAVEN_OPTS: -Xmx3200m  
     steps:
       - checkout
-      - run: circleci tests glob "**/*.go" | circleci tests split --split-by=timings
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -40,7 +39,7 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
       # run tests!
-      - run: mvn clean verify -Dthreads=single -Denv=stage_up -Dbrowser=ch -Dcucumber.filter.tags="@UP" -Dmaven.test.failure.ignore=true 
+      - run: mvn clean verify -Denv=prod_carSaver -Dbrowser=ch -Dcucumber.filter.tags="NE" -Dmaven.test.failure.ignore=true 
 
       - store_artifacts: 
           path: target/surefire-reports
