@@ -1,13 +1,17 @@
 version: 2
 jobs:
   build:
-    docker:
-      # specify the version you desire here
-     - image: markhobson/maven-chrome:latest
+    machine:
+      image: ubuntu-2004:current
+      docker_layer_caching: true
+    resource_class: large
+    #Docker:
+     # - image: cimg/go:1.17
+     # - image: cimg/postgres:14.5.0
     working_directory: ~/demoProject
     environment:
       # Customize the JVM maximum heap limit
-        
+      MAVEN_OPTS: -Xmx3200m  
     steps:
       - checkout
       # Download and cache dependencies
@@ -34,7 +38,7 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
       # run tests!
-      - run: mvn clean verify -Dthreads=single -Denv=stage_up -Dbrowser=ch -Dcucumber.filter.tags="@UP_signIn" -Dmaven.test.failure.ignore=true 
+      - run: mvn clean verify -Dthreads=single -Denv=stage_up -Dbrowser=ch -Dcucumber.filter.tags="@UP" -Dmaven.test.failure.ignore=true 
 
       - store_artifacts: 
           path: target/surefire-reports
