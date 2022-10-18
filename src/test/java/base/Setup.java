@@ -62,8 +62,6 @@ public class Setup {
         } else if (driverType.equalsIgnoreCase("sf")) {
             WebDriverManager.safaridriver().setup();
             SafariOptions options = new SafariOptions();
-            //caps.setCapability(SafariDriver.FORCE_CREATE_PROCESS, true);
-            //caps.setCapability(SafariDriver.IE_SWITCHES, "-private");
             driver = new SafariDriver(options);
         }
         driver.manage().deleteAllCookies();
